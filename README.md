@@ -13,3 +13,6 @@ python3 -m venv venv
 pip install -r requirements-dev.txt
 pip install -r requirements.txt
 ```
+
+## 3. confluent-kafka-python
+- https://github.com/confluentinc/confluent-kafka-python

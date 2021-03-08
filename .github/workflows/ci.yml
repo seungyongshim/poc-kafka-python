@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+    - name: running kafka
+      run: |
+        cd kafka
+        docker-compose up -d
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
@@ -21,6 +25,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
+    - name: logging kafka
+      run: |
+        cd kafka
+        docker-compose logs            
     - name: set pythonpath
       run: |
         echo "PYTHONPATH=./src:${PYTHONPATH}" >> $GITHUB_ENV        
