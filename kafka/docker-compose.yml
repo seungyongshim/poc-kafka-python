@@ -2,6 +2,7 @@ version: '2.1'
 
 services:
   zoo1:
+    restart: always
     image: zookeeper:3.4.9
     hostname: zoo1
     ports:
@@ -12,6 +13,7 @@ services:
       ZOO_SERVERS: server.1=zoo1:2888:3888
 
   kafka1:
+    restart: always
     image: confluentinc/cp-kafka:5.5.3
     hostname: kafka1
     ports:
@@ -28,6 +30,7 @@ services:
     depends_on:
       - zoo1
   kafdrop:
+    restart: always  
     image: obsidiandynamics/kafdrop
     restart: always
     ports:

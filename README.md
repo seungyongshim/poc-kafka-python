@@ -14,5 +14,11 @@ pip install -r requirements-dev.txt
 pip install -r requirements.txt
 ```
 
-## 3. confluent-kafka-python
-- https://github.com/confluentinc/confluent-kafka-python
+## 3. run kafka
+```powershell
+cd kafka
+docker-compose up -d
+```
+
+## 4. kafdrop
+[http://localhost:9000](http://localhost:9000)

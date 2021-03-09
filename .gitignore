@@ -15,7 +15,7 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-
+typings
 cov.xml
 
 # User-specific files

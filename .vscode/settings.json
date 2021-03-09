@@ -29,5 +29,12 @@
                 "cmd": " ${env:PYTHONPATH}='./src'; ./venv/Scripts/Activate.ps1; coverage run --source src -m pytest ; coverage xml -o cov.xml; coverage report -m"
             }
         ]
-    }
+    },
+    "cSpell.words": [
+        "BROKERCONNECT",
+        "Deduplication",
+        "kafdrop",
+        "noverify",
+        "obsidiandynamics"
+    ]
 }
